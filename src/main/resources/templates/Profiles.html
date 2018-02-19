@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="Startsite :: header">
+</head>
+<body class="container">
+<ul th:replace="Startsite :: navigate"></ul>
+
+<ul th:each="profil : ${profillist}">
+
+    <a th:href="@{'/profil/'+${profil.name}}" th:text="${profil.name}"></a>
+
+
+</ul>
+
+</body>
+</html>

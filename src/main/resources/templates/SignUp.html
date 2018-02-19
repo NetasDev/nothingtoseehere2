@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="Startsite :: header">
+</head>
+<body class="container">
+
+<ul th:replace="Startsite :: navigate"></ul>
+<form method="post" th:object ="${personprofil}">
+    <div class="form-group w-25">
+        <label for="NameInput"> Name </label>
+        <input class="form-control" type="text" th:field="*{name}" id="NameInput"/>
+        <span th:errors="*{name}" class="error"></span>
+    </div>
+    <div class="form-group w-25">
+        <label for="gitNameInput"> GithubName </label>
+        <input class="form-control" type="text" th:field="*{githubName}" id="gitNameInput"/>
+        <span th:errors="*{githubName}" class="error"></span>
+    </div>
+    <div class="form-group w-25">
+        <label for="matrikelInput"> Matrikelnummer </label>
+        <input class="form-control" type="number" th:field="*{matrikelnumber}" id="matrikelInput"/>
+        <span th:errors="*{matrikelnumber}" class="error"></span>
+    </div>
+    <div class="form-group w-25">
+        <label for="workprobeInput"> Arbeitsprobe </label>
+        <input class="form-control" type="text" th:field="*{workprobe}" id="workprobeInput"/>
+        <span th:errors="*{workprobe}" class="error"></span>
+    </div>
+    <div class="form-group w-25">
+        <label for="IntroInput"> Introtext </label>
+        <input class="form-control" type="text" th:field="*{introtext}" id="IntroInput"/>
+        <span th:errors="*{introtext}" class="error"></span>
+    </div>
+
+    <input type="submit" value="Account erstellen" class="btn btn-primary"/>
+
+</form>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
