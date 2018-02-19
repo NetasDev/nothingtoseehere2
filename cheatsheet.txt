@@ -1,0 +1,25 @@
+Docker :
+
+docker ps list running containers
+docker image ls
+docker container --help
+docker container ls -a lists all container even the ones not running
+docker push username/repository:tag
+docker run -p 4000:80 z.b. für ports -d to keep running in background
+docker stay deploy to runn app
+docker swarm init to start swarm manager
+
+
+docker-compose up zum starten
+docker-compose up--file blabla.yml up um aus anderem file zu starten
+
+docker build -t name <ordner>
+
+
+github:
+git merge subbranch
+git branch -d subbranch
+git checkout -b branch to create and switch to
+git branch to check branch you are in
+git branch -a to show all
+
